@@ -5,144 +5,157 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Tree created
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000001f001301440
+Calloc returned: 000002157de93810
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000001f001301770
+Calloc returned: 000002157de93b40
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000001f0011f2490
+Calloc returned: 000002157dfb7fd0
 Start scanning db
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001301b10
+Calloc returned: 000002157de93ea0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f39c0
+Calloc returned: 000002157de93f30
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3a50
+Calloc returned: 000002157dfb74c0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3ae0
+Calloc returned: 000002157dfb7550
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3b70
+Calloc returned: 000002157dfb9310
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3c00
+Calloc returned: 000002157dfb93a0
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3c90
+Calloc returned: 000002157dfb9430
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3d20
+Calloc returned: 000002157dfb94c0
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3db0
+Calloc returned: 000002157dfb9550
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3e40
-prefix: 35
+Calloc returned: 000002157dfb95e0
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0011f3ed0
+Calloc returned: 000002157dfb9670
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001306fb0
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307040
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f0013070d0
-prefix: 35
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307160
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f0013071f0
+Calloc returned: 000002157dfb9700
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307990
+Calloc returned: 000002157dfb9790
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0013072d0
+Calloc returned: 000002157dfb9820
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb98b0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9940
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9cf0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9ea0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0013075a0
+Calloc returned: 000002157dfba5f0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307630
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307900
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307a20
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001308170
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f0013076c0
+Calloc returned: 000002157dfb9a20
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307d80
+Calloc returned: 000002157dfb9e10
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0013080e0
-prefix: 35
+Calloc returned: 000002157dfb9bd0
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba680
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9b40
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9d80
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9ab0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f0013077e0
+Calloc returned: 000002157dfba4d0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307870
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307360
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000001f001307c60
+Calloc returned: 000002157dfb9f30
 prefix: 35
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307cf0
+Calloc returned: 000002157dfba440
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000001f001307750
+Calloc returned: 000002157dfba0e0
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfb9c60
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba050
+prefix: 35
+prefix: 35
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba170
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba830
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba8c0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 000002157dfba710
 prefix: 35
 prefix: 35
 Finish scanning db
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
---------------------Finish program--------------------

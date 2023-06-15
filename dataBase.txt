@@ -4,7 +4,9 @@
             ?Actor
                 #BillyHerington
                 ?Footballer
-                    #Messi
+                    ?Russian
+                        #Dzuba
+                        #Messi
                     ?Singer
                         ?PankRock
                             #EgorLetov
@@ -30,4 +32,6 @@
             #AttackHelicopter
     ?Animal
         #Sholtorapka
-        #FIVT
+        ?Four
+            #FIVT
+            #Stol

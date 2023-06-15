@@ -1,9 +1,9 @@
 
-//#define TX_USE_SPEAK
+#define TX_USE_SPEAK
+#include <TXLib.h>
 
 #include <stdio.h>
 #include <math.h>
-//#include <TXLib.h>
 #define LOGGING
 #include "akinator.h"
 
@@ -61,7 +61,7 @@ int main()
 
     def_node* temp_ptr_wayd_d  = allocate_array(def_node, MAX_TREE_HIGHT);
     def_node* temp_ptr_wayd_c1 = allocate_array(def_node, MAX_TREE_HIGHT);
-    def_node* temp_ptr_wayd_c2 = allocate_array(def_node, MAX_TREE_HIGHT);
+    def_node* temp_ptr_wayd_c2 = allocate_array(def_node, MAX_TREE_HIGHT); //make struct for 3
 
     Assert(temp_ptr_wayd_d == NULL);
     Assert(temp_ptr_wayd_c1 == NULL);
@@ -76,6 +76,7 @@ int main()
     Assert(way_down.Ptr == NULL);
 
     MainMenu(&tree, &way_down, &way_down_c1, &way_down_c2);
+    //free way down, akinator_Dtor
 
     HTMLDump(&tree, "EXAMPLE");
 }
@@ -85,8 +86,8 @@ tree_t StructureTreeInit(const char* name,
                          const char* file,
                          int line)
 {
-    void*              Ptr             = NULL;
-    size_t             Size            = 0;
+    void*   Ptr  = NULL;
+    size_t  Size = 0;
 
     tree_t temp_tree =
     {
@@ -263,12 +264,13 @@ char ReadPrefix(FILE* db)
     return sym;
 }
 
-int Comparison(tree_t* tree, const char* name1, const char* name2, queue_t* way_down1, queue_t* way_down2)
+int Comparison(tree_t* tree, const char* name1, const char* name2,
+               queue_t* way_down1, queue_t* way_down2)
 {
     if (FindNode(tree, tree->Ptr, name1, way_down1, LEFT) ||
-        FindNode(tree, tree->Ptr, name2, way_down2, LEFT))
+        FindNode(tree, tree->Ptr, name2, way_down2, LEFT))  //const ==NOT_FOUND
     {
-        SpeakAndPrint("I have no information about this fucking slaves\n");
+        SpeakAndPrint("I have no information about this objects\n");
 
         return -1;
     };
@@ -284,7 +286,8 @@ int Comparison(tree_t* tree, const char* name1, const char* name2, queue_t* way_
 
     for (size_t i = 0; i < way_down1->Tail; i++)
     {
-        if (way_down1->Ptr[i].Node == way_down2->Ptr[i].Node && way_down1->Ptr[i + 1].Branch == way_down2->Ptr[i + 1].Branch)
+        if (way_down1->Ptr[i    ].Node   == way_down2->Ptr[i].Node &&
+            way_down1->Ptr[i + 1].Branch == way_down2->Ptr[i + 1].Branch)
         {
             PrintQuality(way_down1, i);
 
@@ -320,7 +323,7 @@ int PrintDif(const char* name, queue_t* way_down, size_t i_dif)
     return 0;
 }
 
-int PrintQuality(queue_t* way_down, size_t i)
+int PrintQuality(queue_t* way_down, size_t i) //flag for ','
 {
     if (way_down->Ptr[i + 1].Branch == LEFT)
     {
@@ -342,7 +345,9 @@ int MainMenu(tree_t* tree, queue_t* way_down_d, queue_t* way_down_c1, queue_t* w
 
     while (true)
     {
-        SpeakAndPrint("Type \'e\' to exit, \'g\' to guess, \'d\' to see the definition of an object, \'c\' to compare objects\n");
+        SpeakAndPrint("Type \'e\' to exit, \'g\' to guess,"
+                      "\'d\' to see the definition of an object,"
+                      "\'c\' to compare objects\n"); //define not speak
 
         char sym = 0;
 
@@ -372,7 +377,7 @@ int MainMenu(tree_t* tree, queue_t* way_down_d, queue_t* way_down_c1, queue_t* w
 
                 return 0; // break from cycle
 
-            default:
+            default:    //show db
                 SpeakAndPrint("WHATAFUCK, u must type one of 3 symbols\n");
         }
     }
@@ -455,7 +460,7 @@ int Guess(tree_t* tree, elem_s* node)
             }
             break;
         default:
-            SpeakAndPrint("TYPE \'y\' OR \'n\' NEXT TIME, FUCKING SLAVE!\n");
+            SpeakAndPrint("TYPE \'y\' OR \'n\' NEXT TIME!\n");
     }
 
     return 0;
@@ -491,7 +496,7 @@ int ReadNewNode(tree_t* tree, elem_s* node)
             break;
 
         default:
-            SpeakAndPrint("TYPE y OR n NEXT TIME, FUCKING SLAVE!\n");
+            SpeakAndPrint("TYPE y OR n NEXT TIME!\n");
     }
 
     SpeakAndPrint("Now I've remembered!\n");
@@ -518,16 +523,6 @@ void SpeakAndPrint(const char* str...)
     system(cmd);
 }
 
-/*
-int InsertBeforeElem(tree_t* tree, size_t i_anc, elem_t elem)
-{
-    log("start insert before\n");
-
-    InsertAfterElem(tree, tree->Ptr[i_anc].prev, elem);
-
-    return 0;
-}
-*/
 
 int InsertSon(tree_t* tree, elem_s* parent, char* ins_elem, const char* quest, size_t num_son)
 {
@@ -623,7 +618,7 @@ int PrintDefinition(tree_t* tree, queue_t* way_down, const char* name)
 {
     if (FindNode(tree, tree->Ptr, name, way_down, LEFT))
     {
-        SpeakAndPrint("I have no information about this fucking slave\n");
+        SpeakAndPrint("I have no information about this object\n");
 
         return -1;
     }
@@ -634,14 +629,17 @@ int PrintDefinition(tree_t* tree, queue_t* way_down, const char* name)
     {
         if (i != way_down->Tail - 2)
         {
-            log("str: %s, branch: %d\n", way_down->Ptr[i].Node->elem, way_down->Ptr[i + 1].Branch);
+            log("str: %s, branch: %d\n", way_down->Ptr[i].Node->elem,
+                                         way_down->Ptr[i + 1].Branch);
 
             PrintQuality(way_down, i);
         }
         else
         {
-            if (way_down->Ptr[i + 1].Branch == LEFT)    SpeakAndPrint("%s"    , way_down->Ptr[i].Node->elem);
-            else                                        SpeakAndPrint("not %s", way_down->Ptr[i].Node->elem);
+            if (way_down->Ptr[i + 1].Branch == LEFT) //to print_quality
+                    SpeakAndPrint("%s"    , way_down->Ptr[i].Node->elem);
+            else
+                    SpeakAndPrint("not %s", way_down->Ptr[i].Node->elem);
         }
     }
 
@@ -651,7 +649,7 @@ int PrintDefinition(tree_t* tree, queue_t* way_down, const char* name)
     {
         way_down->Ptr[i] = {NULL, 0};
     }
-    way_down->Tail = 0;
+    way_down->Tail = 0;   //make func for free
 
     return 0;
 }
