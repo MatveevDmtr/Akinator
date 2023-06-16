@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 #define USER_MODE      1
@@ -33,10 +34,12 @@
 
 
 
-const char* DUMP_FILE_NAME = "dump.dot";
-const char* PICNAME        = "graphCode";
+
+const char* DATABASE_PATH = "DataBases/dataBase.txt";
+const char* DUMP_FILE_NAME = "GraphViz/dump.dot";
+const char* PICNAME        = "GraphViz/graphCode";
 const char* FILE_EXTENSION = ".png";
-const char* HTML_FILE_NAME = "htmldump.html";
+const char* HTML_FILE_NAME = "GraphViz/htmldump.html";
 
 
 typedef unsigned long long bird_t;
@@ -83,7 +86,7 @@ const char* POISONED_ELEM = "Xz";
 
 const size_t MAX_LEN_PICNAME = 15;
 
-const size_t MAX_LEN_CONSOLE_CMD = 50;
+const size_t MAX_LEN_CONSOLE_CMD = 200;
 
 const size_t MAX_LEN_NUM_DUMP = 10;
 
@@ -119,10 +122,6 @@ int ScanDataBase(tree_t* tree);
 
 char ReadPrefix(FILE* db);
 
-int InsertNode(tree_t* tree, elem_s* parent, char* ins_elem, size_t num_son);
-
-int ConfigNode(elem_s** son_field, elem_s* parent, char* ins_elem);
-
 int PrintQuality(queue_t* way_down, size_t i);
 
 int WriteDataBase(elem_s* root);
@@ -136,18 +135,6 @@ int FindNode(tree_t* tree, elem_s* node, const char* name, queue_t* way_down, si
 int PrintDefinition(tree_t* tree, queue_t* way_down, const char* name);
 
 int InsertSon(tree_t* tree, elem_s* parent, char* ins_elem, const char* quest, size_t num_son);
-
-int InsertBeforeElem(tree_t* tree, size_t i_anc, elem_t elem);
-
-int InsertAfterElem (tree_t* tree, size_t i_anc, elem_t elem);
-
-int TreeVerify(tree_t* tree);
-
-int TreeAppend(tree_t* tree, elem_t elem);
-
-elem_t TreePop(tree_t* tree);
-
-elem_t DeleteElem(tree_t* tree, size_t i_del);
 
 void GraphTreeDump(const tree_t* tree, const char* picname);
 

@@ -2,14 +2,11 @@
 //#define TX_USE_SPEAK
 //#include <TXLib.h>
 
-#include <stdio.h>
 #include <math.h>
 #include "../includes/akinator.h"
 
 #include "../src/GetPoison/GetPoison.h"
 #include "../src/logging/logging.hpp"
-
-const char* DATABASE_PATH = "DataBases/dataBase.txt";
 
 enum ERRCODES
 {
@@ -508,6 +505,7 @@ void SpeakAndPrint(const char* str...)
     vsprintf(message, str, args);
 
     printf("%s", message);
+    fflush(stdout);
 
     char cmd[MAX_LEN_CONSOLE_CMD] = "";
 
@@ -750,7 +748,7 @@ int HTMLDump(const tree_t* tree, const char* occasion)
     dumphtml("<font size=4>");
     dumphtml("\nOcassion for DUMP: %s\n\n", occasion);
     dumphtml("%s\n\n", html_piccmd);
-    dumphtml("<\pre>\n");
+    dumphtml("<\\pre>\n");
 
     num_dump++;
 

@@ -5,160 +5,273 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Tree created
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 0x556aed1d8540
+Calloc returned: 0x5639ad828540
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 0x556aed1d8870
+Calloc returned: 0x5639ad828870
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 0x556aed1d8ba0
+Calloc returned: 0x5639ad828ba0
 Start scanning db
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da0c0
+Calloc returned: 0x5639ad82a0c0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da150
+Calloc returned: 0x5639ad82a150
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da1e0
+Calloc returned: 0x5639ad82a1e0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da270
+Calloc returned: 0x5639ad82a270
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da300
+Calloc returned: 0x5639ad82a300
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da390
+Calloc returned: 0x5639ad82a390
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da420
+Calloc returned: 0x5639ad82a420
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da4b0
+Calloc returned: 0x5639ad82a4b0
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da540
+Calloc returned: 0x5639ad82a540
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da5d0
+Calloc returned: 0x5639ad82a5d0
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da660
+Calloc returned: 0x5639ad82a660
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1da6f0
-prefix: 35
-prefix: 35
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1da780
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1da810
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1da8a0
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1da930
-prefix: 35
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1da9c0
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1daa50
+Calloc returned: 0x5639ad82a6f0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1daae0
+Calloc returned: 0x5639ad82a780
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1dab70
+Calloc returned: 0x5639ad82a810
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82a8a0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82a930
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82a9c0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82aa50
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1dac00
+Calloc returned: 0x5639ad82aae0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1dac90
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1dad20
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1dadb0
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1dae40
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1daed0
+Calloc returned: 0x5639ad82ab70
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1daf60
+Calloc returned: 0x5639ad82ac00
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1daff0
-prefix: 35
+Calloc returned: 0x5639ad82ac90
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82ad20
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82adb0
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82ae40
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82aed0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db080
+Calloc returned: 0x5639ad82af60
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db110
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1db1a0
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 0x556aed1db230
+Calloc returned: 0x5639ad82aff0
 prefix: 35
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db2c0
+Calloc returned: 0x5639ad82b080
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db350
+Calloc returned: 0x5639ad82b110
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82b1a0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82b230
+prefix: 35
+prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db3e0
+Calloc returned: 0x5639ad82b2c0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 0x556aed1db470
+Calloc returned: 0x5639ad82b350
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82b3e0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x5639ad82b470
 prefix: 35
 prefix: 35
 Finish scanning db
+node: Human
+added to wd: 0x5639ad8284b0
+wd.tail=1
+question in FindNode: Human
+branch in FindNode: 1
+node: Man
+added to wd: 0x5639ad82a0c0
+wd.tail=2
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+node: Superstar
+added to wd: 0x5639ad82a1e0
+wd.tail=3
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+node: Actor
+added to wd: 0x5639ad82a300
+wd.tail=4
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+node: BillyHerington
+added to wd: 0x5639ad82a420
+wd.tail=5
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+question in FindNode: BillyHerington
+branch in FindNode: 1
+node: Footballer
+added to wd: 0x5639ad82a4b0
+wd.tail=5
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+question in FindNode: Footballer
+branch in FindNode: 2
+node: Russian
+added to wd: 0x5639ad82a540
+wd.tail=6
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+question in FindNode: Footballer
+branch in FindNode: 2
+question in FindNode: Russian
+branch in FindNode: 1
+node: Dzuba
+added to wd: 0x5639ad82a660
+wd.tail=7
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+question in FindNode: Footballer
+branch in FindNode: 2
+question in FindNode: Russian
+branch in FindNode: 1
+question in FindNode: Dzuba
+branch in FindNode: 1
+node: Messi
+added to wd: 0x5639ad82a6f0
+wd.tail=7
+question in FindNode: Human
+branch in FindNode: 1
+question in FindNode: Man
+branch in FindNode: 1
+question in FindNode: Superstar
+branch in FindNode: 1
+question in FindNode: Actor
+branch in FindNode: 1
+question in FindNode: Footballer
+branch in FindNode: 2
+question in FindNode: Russian
+branch in FindNode: 1
+question in FindNode: Messi
+branch in FindNode: 2
+node found
+str: Human, branch: 1
+str: Man, branch: 1
+str: Superstar, branch: 1
+str: Actor, branch: 2
+str: Footballer, branch: 1
 Start writing db
 start writing node: Human
 try to write sons of Human
@@ -235,8 +348,11 @@ try to write leaf FIVT
 start writing node: Stol
 try to write leaf Stol
 Finish writing db
-tree pointer in HTMLDump: 0x7fff8bef0c60
-picture name: graphCode0.png
-tree pointer: 0x7fff8bef0c60
+tree pointer in HTMLDump: 0x7ffed6fac000
+picture name: GraphViz/graphCode0.png
+tree pointer: 0x7ffed6fac000
 start making console cmd
-console cmd: dot -T png -o graphCode0.png dump.dot
+console cmd: dot -T png -o GraphViz/graphCode0.png GraphViz/dump.dot
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+--------------------Finish program--------------------
