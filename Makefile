@@ -1,27 +1,27 @@
 # Переменная CC указывает компилятор, используемый для сборки
 CC=g++
 #В переменной CFLAGS лежат флаги, которые передаются компилятору
-CFLAGS=-c
+CFLAGS=-c -DLOGGING
 
-all: Akinator.exe execute clean	
+all: build execute clear
 
-Akinator.exe: Akinator_main.o GetPoison.o logging.o
-	$(CC) Akinator_main.o GetPoison.o logging.o -o Akinator.exe
+build: Akinator_main.o GetPoison.o logging.o
+	$(CC) Akinator_main.o GetPoison.o logging.o -o Akinator
 
-Akinator_main.o: Akinator_main.cpp
-	$(CC) $(CFLAGS) Akinator_main.cpp
+Akinator_main.o: src/Akinator_main.cpp
+	$(CC) $(CFLAGS) src/Akinator_main.cpp
 
-GetPoison.o: ..\Processor_v4\GetPoison.cpp
-	$(CC) $(CFLAGS) ..\Processor_v4\GetPoison.cpp
-#$(CC) $(CFLAGS) D:\Programming\C\Ded_course_1_sem\Processor_v4\GetPoison.cpp
+GetPoison.o: src/GetPoison/GetPoison.cpp
+	$(CC) $(CFLAGS) src/GetPoison/GetPoison.cpp
 
-logging.o: ..\Processor_v4\logging.cpp
-	$(CC) $(CFLAGS) ..\Processor_v4\logging.cpp
+logging.o: src/logging/logging.cpp
+	$(CC) $(CFLAGS) src/logging/logging.cpp
 
-clean:
+clear:
 	rm *.o
 
 execute:
-	Akinator.exe
-del_exe:
-	rm Akinator.exe
+	./Akinator
+
+use_valgrind:
+	valgrind --leak-check=full ./Akinator

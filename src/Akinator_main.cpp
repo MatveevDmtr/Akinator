@@ -1,21 +1,15 @@
 
-#define TX_USE_SPEAK
-#include <TXLib.h>
+//#define TX_USE_SPEAK
+//#include <TXLib.h>
 
 #include <stdio.h>
 #include <math.h>
-#define LOGGING
-#include "akinator.h"
+#include "../includes/akinator.h"
 
+#include "../src/GetPoison/GetPoison.h"
+#include "../src/logging/logging.hpp"
 
-//#include "Tree.h"
-
-
-//#include "D:\\Programming\\C\\Ded_course_1_sem\\Stack\\stack.h"
-
-#include "D:\\Programming\\C\\Ded_course_1_sem\\Processor_v4\\GetPoison.h"
-
-#include "D:\\Programming\\C\\Ded_course_1_sem\\Processor_v4\\logging.h"
+const char* DATABASE_PATH = "DataBases/dataBase.txt";
 
 enum ERRCODES
 {
@@ -45,8 +39,6 @@ enum BIN_ANSWERS
     NO  = 0
 };
 
-//enum REALLOC_MODES
-
 
 
 int main()
@@ -67,9 +59,9 @@ int main()
     Assert(temp_ptr_wayd_c1 == NULL);
     Assert(temp_ptr_wayd_c2 == NULL);
 
-    static queue_t way_down    = {.Ptr = temp_ptr_wayd_d,  .Head = 0, .Tail = 0};
-    static queue_t way_down_c1 = {.Ptr = temp_ptr_wayd_c1, .Head = 0, .Tail = 0};
-    static queue_t way_down_c2 = {.Ptr = temp_ptr_wayd_c2, .Head = 0, .Tail = 0};
+    static queue_t way_down    = {.Ptr = temp_ptr_wayd_d,  .Head = 0, .Tail = 0}; // going down the tree for printing the definition
+    static queue_t way_down_c1 = {.Ptr = temp_ptr_wayd_c1, .Head = 0, .Tail = 0}; // going down the tree for object 1 in comparison
+    static queue_t way_down_c2 = {.Ptr = temp_ptr_wayd_c2, .Head = 0, .Tail = 0}; // going down the tree for object 2 in comparison
 
     ScanDataBase(&tree);
 
@@ -171,11 +163,11 @@ int WriteDataBase(elem_s* root)
 
     Assert(root == nullptr);
 
-    FILE* db = fopen("dataBase.txt", "w");
+    FILE* db = fopen(DATABASE_PATH, "w");
 
     if (db == NULL)
     {
-        SpeakAndPrint("Can't open dataBase file\n");
+        SpeakAndPrint("Can't open dataBase file to write\n");
 
         return -1;
     }
@@ -205,11 +197,11 @@ int ScanDataBase(tree_t* tree)
 
     Assert(tree->Ptr == nullptr);
 
-    FILE* db = fopen("dataBase.txt", "r");
+    FILE* db = fopen(DATABASE_PATH, "r");
 
     if (db == NULL)
     {
-        SpeakAndPrint("Can't open dataBase file\n");
+        SpeakAndPrint("Can't open dataBase file to read\n");
 
         return -1;
     }
@@ -508,7 +500,7 @@ void SpeakAndPrint(const char* str...)
 {
     Assert(str == nullptr);
 
-    va_list args = {0};
+    va_list args = {};
     va_start(args, str);
 
     char message[MAX_LEN_ELEM] = "";
@@ -519,7 +511,10 @@ void SpeakAndPrint(const char* str...)
 
     char cmd[MAX_LEN_CONSOLE_CMD] = "";
 
-    sprintf(cmd, ".\\eSpeak\\command_line\\espeak.exe \"%s\"", message);
+    //sprintf(cmd, ".\\eSpeak\\command_line\\espeak.exe \"%s\"", message);
+    // it's a Windows variant
+
+    sprintf(cmd, "espeak \"%s\"", message);
     system(cmd);
 }
 
@@ -654,89 +649,6 @@ int PrintDefinition(tree_t* tree, queue_t* way_down, const char* name)
     return 0;
 }
 
-/*
-elem_t DeleteElem(tree_t* tree, size_t i_del)
-{
-    log("start delete\n");
-
-    TreeVerify(tree);
-
-    elem_t del_elem = tree->Ptr[i_del].elem;
-    size_t del_next = tree->Ptr[i_del].next;
-    size_t del_prev = tree->Ptr[i_del].prev;
-    size_t old_free = tree->Free;
-
-    tree->Free = i_del;
-
-    tree->Ptr[i_del].elem = POISONED_ELEM;
-    tree->Ptr[i_del].next = old_free;
-    tree->Ptr[i_del].prev = PREV_FOR_FREE;
-
-    tree->Ptr[del_prev].next = del_next;
-    tree->Ptr[del_next].prev = del_prev;
-
-    tree->Size--;
-
-    TreeVerify(tree);
-
-    return del_elem;
-}
-*/
-
-/*
-int TreeVerify(tree_t* tree)
-{
-    if (tree == NULL)
-    {
-        LogError(SEGFAULT);
-        return SEGFAULT;
-    }
-    if (tree->DeadInside == 1)
-    {
-        LogError(ZOMBIE);
-        return ZOMBIE;
-    }
-    if (tree->Ptr == NULL)
-    {
-        LogError(NULLPTR);
-        return NULLPTR;
-    }
-    if (tree->Size < 0)                  LogError(SIZEPOISONED);
-    if (tree->Capacity < MIN_LEN_Tree)   LogError(NEGCAP);
-    if (tree->Capacity < tree->Size)      LogError(STACKOVERFLOW);
-    if (tree->Free > tree->Capacity - 1)  LogError(FREE_ERROR);
-
-    size_t i_next = 0;
-
-    for (size_t i = 0; i < tree->Capacity - 1; i++)
-    {
-        i_next = tree->Ptr[i].next;
-
-        if (tree->Ptr[i].prev != PREV_FOR_FREE)
-        {
-            if (tree->Ptr[i_next].prev != i)
-            {
-                LogError(CHAINERROR);
-
-                log("Elements with phys addresses %d and %d have invalid connection\n", i, i_next);
-            }
-        }
-        else
-        {
-            if (tree->Ptr[i_next].prev != PREV_FOR_FREE)
-            {
-                LogError(CHAINERROR);
-
-                log("Free element with phys address %d points not at a free element %d\n", i, i_next);
-            }
-        }
-    }
-
-    return 0;
-}
-
-*/
-
 int LogCritError(int errcode, const char* func, int line)
 {
     switch (errcode)
@@ -802,7 +714,7 @@ int HTMLDump(const tree_t* tree, const char* occasion)
 
     char str_num_dump[MAX_LEN_NUM_DUMP] = "";
 
-    itoa(num_dump, str_num_dump, 10);
+    snprintf(str_num_dump, 3, "%ld", num_dump);
 
     strcpy(curr_picname, PICNAME);
     strcat(curr_picname, str_num_dump);
@@ -818,8 +730,8 @@ int HTMLDump(const tree_t* tree, const char* occasion)
     strcat(html_piccmd, curr_picname);
     strcat(html_piccmd, "\" alt=\"ERROR: Picture Not Found\">");
 
-    char* r_mode = "a";
-    if (num_dump == 0)          r_mode = "w";
+    char* r_mode = (char*) "a";
+    if (num_dump == 0)          r_mode = (char*) "w";
 
     FILE* html_file = fopen(HTML_FILE_NAME, r_mode);
 
@@ -832,7 +744,7 @@ int HTMLDump(const tree_t* tree, const char* occasion)
     dumphtml("<b>\n");
     dumphtml("<font size=6>");
     dumphtml("Tree dump (");
-    dumphtml("%d", num_dump);
+    dumphtml("%ld", num_dump);
     dumphtml(")\n");
     dumphtml("<i>");
     dumphtml("<font size=4>");
@@ -843,85 +755,9 @@ int HTMLDump(const tree_t* tree, const char* occasion)
     num_dump++;
 
     fclose(html_file);
-}
-
-/*
-int TreeRecalloc(Tree_t* tree, size_t mode)
-{
-    switch(mode)
-    {
-        case SORTING:
-        {
-            elem_s* temp_ptr = allocate_array(elem_s, tree->Capacity * 2);
-
-            if (temp_ptr == NULL)
-            {
-                print_log(FRAMED, "CALLOC ERROR: Can't find memory for the Tree");
-
-                return -1;
-            }
-            *temp_ptr = *(tree->Ptr);
-
-            tree->Capacity *= 2;
-
-            temp_ptr[0] = tree->Ptr[0];
-
-            temp_ptr[0].next = 1;
-            temp_ptr[0].prev = tree->Size;
-
-            size_t i_next = tree->Ptr[0].next;
-
-            for (size_t i = 0; i < tree->Size; i++)
-            {
-                log("i_next = %d\n", i_next);
-
-                temp_ptr[i + 1] = tree->Ptr[i_next];
-
-                temp_ptr[i + 1].next = i + 2;
-
-                temp_ptr[i + 1].prev = i;
-
-                i_next = tree->Ptr[i_next].next;
-            }
-
-            tree->Ptr = temp_ptr;
-
-            tree->Ptr[tree->Size].next = 0;
-            tree->Ptr[tree->Size].prev = tree->Size - 1;
-
-            HTMLDump(tree, "after copy");
-
-            for (size_t i = tree->Size + 1; i < tree->Capacity; i++)
-            {
-                tree->Ptr[i].next = i + 1;
-
-                tree->Ptr[i].prev = -1;
-
-                tree->Ptr[i].elem = POISONED_ELEM;
-            }
-
-            tree->Free = tree->Size + 1;
-
-            break;
-        }
-        case 2:
-        {
-            elem_s* temp_ptr = (elem_s*)realloc(tree->Ptr, tree->Capacity * 2);
-            if (temp_ptr == NULL)
-            {
-                print_log(FRAMED, "RECALLOC ERROR: Can't find memory for the Tree");
-
-                return -1;
-            }
-
-            tree->Ptr = temp_ptr;
-            break;
-        }
-    }
 
     return 0;
 }
-*/
 
 void DrawNode(elem_s* node, FILE* dump_file, const char* branch_label)
 {
@@ -963,59 +799,9 @@ void GraphTreeDump(const tree_t* tree, const char* picname)
     //dumpline("splines = \"ortho\";\n");
     dumpline("node [ shape=record ];\n");
 
-    dumpline("Tree [label = \"Tree|size: %d\", style = \"filled\", rankdir = TB, fillcolor = \"indigo\", fontcolor = \"yellow\"];\n", tree->Size);
+    dumpline("Tree [label = \"Tree|size: %ld\", style = \"filled\", rankdir = TB, fillcolor = \"indigo\", fontcolor = \"yellow\"];\n", tree->Size);
 
     DrawNode(tree->Ptr, dump_file, "root");
-    //dumpline("Tree -> struct0 [style=\"invis\" weight = 1000];\n");
-    /*for (int i = 0; i < tree->Size; i++)
-    {
-        dumpline("index%d[label = \"index: %d\", style = \"filled\" fillcolor = \"coral\"];\n", i, i);
-
-        if (i > 0)
-            dumpline("index%d -> index%d [style = \"invis\" weight = 200];\n", i - 1, i);
-    }
-
-    dumpline("INDEX [style = \"filled\", fillcolor = \"lightslateblue\"]\n");
-    dumpline("INDEX -> index0[style = \"invis\" weight = 900]\n");
-    */
-
-    /*
-    for (int i = 0; i < tree->Capacity; i++)
-    {
-        int elem = tree->Ptr[i].elem;
-        int next = tree->Ptr[i].next;
-        int prev = tree->Ptr[i].prev;
-
-        char* color = NULL;
-
-        if (i == 0)
-        {
-            dumpline("struct%d [\nlabel = \"<data>elem: nil|<next>next: %d|<prev>prev: %d\", style = \"filled\", fillcolor = \"cyan\" \n];\n", i, next, prev);
-            dumpline("struct%d -> struct%d [weight = 0] [ color=red  ]\n", i, tree->Ptr[i].next);
-            continue;
-        }
-        if (prev == PREV_FOR_FREE)
-            color = "lightgrey";
-        else
-            color = "aquamarine";
-
-
-        dumpline("struct%d [\nlabel = \"<data>elem: %d|<next>next: %d|<prev>prev: %d\", style = \"filled\", color = \"black\", fillcolor = \"%s\" \n];\n", i, elem, next, prev, color);
-        dumpline("struct%d -> struct%d [dir=none weight=900 style=\"invis\" constraint=true];\n", i - 1, i);
-
-        if (i < tree->Capacity - 1)
-        {
-            dumpline("struct%d -> struct%d [weight = 0, constraint=false, color=red  ]\n", i, tree->Ptr[i].next);
-        }
-    }
-    /*for (int i = 1; i < tree->Capacity; i++)
-    {
-        //dumpline("struct%d:<prev> -> struct%d:<next> [weight = 2] [color=green]\n", i, tree->Ptr[i].prev);
-    }*/
-/*
-    dumpline("structFree [\nlabel = \"free: %d\", style = \"filled\", fillcolor = \"green\"]\n", tree->Free);
-    dumpline("structFree -> struct%d [weight = 0] [color = darkgoldenrod2]\n", tree->Free);
-    */
     dumpline("}");
 
     fclose(dump_file);
@@ -1032,7 +818,5 @@ void GraphTreeDump(const tree_t* tree, const char* picname)
 
     log("console cmd: %s\n", console_cmd);
 
-    printf("%d\n", system("cd D:"));
-    printf("%d\n", system("cd D:\\Programming\\C\\Ded_course_1_sem\\Akinator"));
     printf("%d\n", system(console_cmd));
 }

@@ -5,157 +5,238 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Tree created
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000002157de93810
+Calloc returned: 0x556aed1d8540
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000002157de93b40
+Calloc returned: 0x556aed1d8870
 Type_calloc: def_node
 Sizeof type: 8
-Calloc returned: 000002157dfb7fd0
+Calloc returned: 0x556aed1d8ba0
 Start scanning db
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157de93ea0
+Calloc returned: 0x556aed1da0c0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157de93f30
+Calloc returned: 0x556aed1da150
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb74c0
+Calloc returned: 0x556aed1da1e0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb7550
+Calloc returned: 0x556aed1da270
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9310
+Calloc returned: 0x556aed1da300
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb93a0
+Calloc returned: 0x556aed1da390
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9430
+Calloc returned: 0x556aed1da420
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb94c0
+Calloc returned: 0x556aed1da4b0
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9550
+Calloc returned: 0x556aed1da540
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb95e0
+Calloc returned: 0x556aed1da5d0
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9670
+Calloc returned: 0x556aed1da660
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9700
-prefix: 35
-prefix: 35
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9790
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9820
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb98b0
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9940
-prefix: 35
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9cf0
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9ea0
+Calloc returned: 0x556aed1da6f0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba5f0
+Calloc returned: 0x556aed1da780
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9a20
+Calloc returned: 0x556aed1da810
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1da8a0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1da930
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1da9c0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1daa50
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9e10
+Calloc returned: 0x556aed1daae0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9bd0
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfba680
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9b40
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9d80
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9ab0
+Calloc returned: 0x556aed1dab70
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba4d0
+Calloc returned: 0x556aed1dac00
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfb9f30
-prefix: 35
+Calloc returned: 0x556aed1dac90
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1dad20
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1dadb0
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1dae40
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1daed0
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba440
+Calloc returned: 0x556aed1daf60
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba0e0
-prefix: 63
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfb9c60
-Type_calloc: elem_s
-Sizeof type: 8
-Calloc returned: 000002157dfba050
+Calloc returned: 0x556aed1daff0
 prefix: 35
 prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba170
+Calloc returned: 0x556aed1db080
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba830
+Calloc returned: 0x556aed1db110
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1db1a0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1db230
+prefix: 35
+prefix: 35
 prefix: 35
 prefix: 63
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba8c0
+Calloc returned: 0x556aed1db2c0
 Type_calloc: elem_s
 Sizeof type: 8
-Calloc returned: 000002157dfba710
+Calloc returned: 0x556aed1db350
+prefix: 35
+prefix: 63
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1db3e0
+Type_calloc: elem_s
+Sizeof type: 8
+Calloc returned: 0x556aed1db470
 prefix: 35
 prefix: 35
 Finish scanning db
+Start writing db
+start writing node: Human
+try to write sons of Human
+start writing node: Man
+try to write sons of Man
+start writing node: Superstar
+try to write sons of Superstar
+start writing node: Actor
+try to write sons of Actor
+start writing node: BillyHerington
+try to write leaf BillyHerington
+start writing node: Footballer
+try to write sons of Footballer
+start writing node: Russian
+try to write sons of Russian
+start writing node: Dzuba
+try to write leaf Dzuba
+start writing node: Messi
+try to write leaf Messi
+start writing node: Singer
+try to write sons of Singer
+start writing node: PankRock
+try to write sons of PankRock
+start writing node: EgorLetov
+try to write leaf EgorLetov
+start writing node: Rap
+try to write sons of Rap
+start writing node: Eminem
+try to write leaf Eminem
+start writing node: VictorTsoy
+try to write leaf VictorTsoy
+start writing node: Writer
+try to write sons of Writer
+start writing node: MikhailBulgakov
+try to write leaf MikhailBulgakov
+start writing node: Tarantino
+try to write leaf Tarantino
+start writing node: Teacher
+try to write sons of Teacher
+start writing node: Physics
+try to write sons of Physics
+start writing node: School
+try to write sons of School
+start writing node: Zamyatnin
+try to write leaf Zamyatnin
+start writing node: Ovchos
+try to write leaf Ovchos
+start writing node: Proga
+try to write sons of Proga
+start writing node: DEEEEEEED
+try to write leaf DEEEEEEED
+start writing node: Chubarov
+try to write leaf Chubarov
+start writing node: SanyaLoh
+try to write leaf SanyaLoh
+start writing node: Woman
+try to write sons of Woman
+start writing node: Superstar
+try to write sons of Superstar
+start writing node: Pugacheva
+try to write leaf Pugacheva
+start writing node: Znamka
+try to write leaf Znamka
+start writing node: AttackHelicopter
+try to write leaf AttackHelicopter
+start writing node: Animal
+try to write sons of Animal
+start writing node: Sholtorapka
+try to write leaf Sholtorapka
+start writing node: Four
+try to write sons of Four
+start writing node: FIVT
+try to write leaf FIVT
+start writing node: Stol
+try to write leaf Stol
+Finish writing db
+tree pointer in HTMLDump: 0x7fff8bef0c60
+picture name: graphCode0.png
+tree pointer: 0x7fff8bef0c60
+start making console cmd
+console cmd: dot -T png -o graphCode0.png dump.dot
