@@ -28,7 +28,7 @@
 
 Также для озвучивания вопросов и утверждений компьютера использован консольный синтезатор речи `eSpeak`. Взамодействие пользователя с программой происходит на _английском_ языке.
 
-Документации к вышеперечисленным функциям и библиотекам можно найти тут: [`ctime`](http://cppstudio.com/post/468/), [`mprotect`](https://www.opennet.ru/man.shtml?topic=mprotect&category=2&russian=0).
+Документации к вышеперечисленным модулям можно найти тут: [`eSpeak`](https://ubunlog.com/ru/espeak-convierte-texto-a-voz-terminal/), [`GraphViz`](https://graphviz.org/download/).
 
 ## Логика работы программы
 
